@@ -10,8 +10,13 @@
     <form>
         <input id="fullname"  type="text" placeholder="Nome e Cognome">
         <input id="kmresult" type="number" placeholder="Km da percorrere">
-        <input id="ageresult"  type="text" >
+        <select id="ageresult"  name="Fascia d'età">
+            <option value="-18">Minorenne</option>
+            <option value="+18">Maggiorenne</option>
+            <option value="o65">Over 65</option>
+        </select>
         <button id="generate">Genera</button>
+        <button id="reset" type="reset">Annulla</button>
     </form>
     <div id="ticket"></div>
 </body>

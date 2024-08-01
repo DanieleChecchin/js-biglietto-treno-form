@@ -22,15 +22,15 @@ const priceSuffix = '€'
 const fullName = document.getElementById('fullname')
 const kmField = document.getElementById('kmresult')
 const ageField = document.getElementById('ageresult')
-const button = document.getElementById('generate')
+const generate = document.getElementById('generate')
 const ticketElement = document.getElementById('ticket');
-
+const reset = document.getElementById('reset')
 
 
 
 // ! Fase gestione eventi
 
-button.addEventListener('click', function (e) {
+generate.addEventListener('click', function (e) {
     e.preventDefault();
     // Recupero il valore degli input
     const kmValue = kmField.value
@@ -48,10 +48,10 @@ ticketPriceHuman = ticketPrice.toFixed(2)
 // Calcolo lo sconto in base all'età
 result = ticketPrice
 
-if(ageValue < 18){
+if(ageValue === '-18'){
     result = ticketPrice - (ticketPrice / 100*20) //moltiplico per 0.8
     console.log(result)
-}   else if(ageValue > 65){
+}   else if(ageValue === 'o65'){
     result = ticketPrice - (ticketPrice / 100*40) //moltiplico per 0.6
     console.log(result)
 }   
