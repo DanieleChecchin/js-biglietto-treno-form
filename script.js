@@ -19,7 +19,7 @@ const ageSuffix = 'anni'
 //Preparo il suffiso 'euro'
 const priceSuffix = '€'
 
-
+const fullName = document.getElementById('fullname')
 const kmField = document.getElementById('kmresult')
 const ageField = document.getElementById('ageresult')
 const button = document.getElementById('generate')
@@ -35,6 +35,7 @@ button.addEventListener('click', function (e) {
     // Recupero il valore degli input
     const kmValue = kmField.value
     const ageValue = ageField.value
+    const fullNameValue = fullName.value
 
 // ! Fase lavorazione dati
 
@@ -75,6 +76,7 @@ const message = `Il costo finale del tuo biglietto è di ${resultHuman} ${priceS
 ticketElement.innerText = message;
 
     // Stampo in pagina
+    console.log(fullNameValue)
     console.log(kmValue)
     console.log(ageValue)
     console.log(ticketElement)
