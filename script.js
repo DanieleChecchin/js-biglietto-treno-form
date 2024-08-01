@@ -22,6 +22,7 @@ const priceSuffix = '€'
 const fullName = document.getElementById('fullname')
 const kmField = document.getElementById('kmresult')
 const ageField = document.getElementById('ageresult')
+const carriageField = document.getElementById('carriage')
 const generate = document.getElementById('generate')
 const ticketElement = document.getElementById('ticket');
 const reset = document.getElementById('reset')
@@ -83,9 +84,22 @@ ticketElement.innerText = message;
 
 })
 
+// ! Gestisco l'evento reset
+
 reset.addEventListener('click', function(){
     ticketElement.classList.add('d-none')
 })
+
+// ! Numero di carrozza casuale
+
+const random = Math.random();
+
+const max = 10
+
+const carriage = Math.floor(random * max) + 1;
+console.log(carriage)
+
+carriageField.innerText = `Il numero di carrozza è ${carriage}` 
 
 
 
