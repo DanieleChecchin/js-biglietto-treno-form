@@ -83,6 +83,9 @@ ticketElement.innerText = message;
 
 })
 
+reset.addEventListener('click', function(){
+    ticketElement.classList.add('d-none')
+})
 
 
 
